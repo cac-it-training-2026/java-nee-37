@@ -1,6 +1,8 @@
 package basic.question02;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * 第5章 入出力
@@ -11,6 +13,16 @@ public class Question02_2 {
 	public static void main(String[] args) throws IOException {
 
 		// TODO:ここに実装
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("商品名と値段を教えてください。");
+		String itemName = reader.readLine();
+		String input_num = reader.readLine();
+
+		int itemPrice = Integer.parseInt(input_num);
+
+		System.out.println("商品の名前は" + itemName + "です。");
+		System.out.println("商品の値段は" + itemPrice + "円です。");
 
 	}
 }
